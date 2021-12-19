@@ -10,7 +10,7 @@ class moodle(object):
         self.tcount = 0
         self.tcourse = TOTAL_COURSE
         self.session = requests.session()
-        self.loginUrl = "http://moodle.mec.ac.in/login/index.php"
+        self.loginUrl = "https://elearning.pnj.ac.id/login/index.php"
         self.dashboard = None
         self.courses = {}
 
@@ -23,9 +23,9 @@ class moodle(object):
             "rememberusername": "0",
         }
         headers = {
-            "Host": "moodle.mec.ac.in",
-            "Origin": "http://moodle.mec.ac.in",
-            "Referer": "http://moodle.mec.ac.in/login/index.php",
+            "Host": "elearning.pnj.ac.id",
+            "Origin": "https://elearning.pnj.ac.id",
+            "Referer": "https://elearning.pnj.ac.id/login/index.php",
             "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
         }
         try:
