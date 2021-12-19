@@ -9,7 +9,7 @@ class course(moodle):
     def get_course(self):
         payload = {"perpage": "50"}
         r = self.session.get(
-            f"http://moodle.mec.ac.in/course/index.php?categoryid={SEMID}",
+            f"https://elearning.pnj.ac.id/login/index.php?categoryid={SEMID}",
             params=payload,
         )
         soup = BeautifulSoup(r.text, "html.parser")
@@ -17,7 +17,7 @@ class course(moodle):
         course_url_list = [
             url["href"]
             for url in soup.select(
-                'a[href^="http://moodle.mec.ac.in/course/view.php?id="]'
+                'a[href^="https://elearning.pnj.ac.id/course/view.php?id="]'
             )
         ]
         return course_url_list
