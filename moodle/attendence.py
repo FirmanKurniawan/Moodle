@@ -21,7 +21,7 @@ class attendence(course):
         atturl = [
             aurl["href"]
             for aurl in soup.select(
-                'a[href^="http://moodle.mec.ac.in/mod/attendance/view.php?id="]'
+                'a[href^="https://elearning.pnj.ac.id/mod/attendance/view.php?id="]'
             )
         ]
         return atturl
@@ -39,7 +39,7 @@ class attendence(course):
         r = self.reqUrl(atturl)
         soup = BeautifulSoup(r.text, "html.parser")
         url = soup.select(
-            'a[href^="http://moodle.mec.ac.in/mod/attendance/attendance.php?sessid="]'
+            'a[href^="https://elearning.pnj.ac.id/mod/attendance/attendance.php?sessid="]'
         )
         if url and url[0].text == "Submit attendance":
             url_to_parse = url[0]["href"]
