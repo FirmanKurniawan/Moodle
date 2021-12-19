@@ -1,0 +1,51 @@
+{
+    "name": "Moodle Auto-Attedence",
+    "description": "Python script to mark moodle attedence",
+    "keywords": ["Not Avialble"],
+    "repository": "https://github.com/xxx",
+    "env": {
+      "USERNAME": {
+        "description": "Moodle Login :  USERNAME or EMAIL",
+        "required": true
+      },
+      "PASSWORD": {
+        "description": "Moodle Login :  PASSWORD",
+        "required": true
+      },
+      "TOTAL_COURSE": {
+        "description": "Total no: of courses in current semester as in moodle",
+        "value" : "8",
+        "required": false
+      },
+      "SEMID": {
+        "description": "Select your semester from https://moodle.mec.ac.in/course/index.php,then check url for semid  eg:moodle.mec/../categoryid=28( '28' ,categoryid is the semid) ",
+        "required": true
+      },
+      "START_TIME": {
+        "description": "Class starting time (UTC or local machine timezone) default = '02:01'(08:31)",
+        "value" : "03:01",
+        "required": false
+      },
+      "END_TIME": {
+        "description": "Class Ending time (UTC or local machine timezone) default = '10:00'(03:30)",
+        "value" : "10:00",
+        "required": false
+      },
+      "TOKEN": {
+        "description": "A bot token from @BotFather to send attedence updates",
+        "value" : "None",
+        "required": false
+      },
+
+      "CHAT_ID": {
+        "description": "Your Telegram unique chat_id or @username (settings->ID or username)",
+        "value" : "None",
+        "required": false
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
