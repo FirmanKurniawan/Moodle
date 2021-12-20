@@ -17,16 +17,16 @@ class moodle(object):
     def login(self):
         payload = {
             "anchor": "",
-            "logintoken": "uXdKOxgA0EkmiXurxieChKvZ7e9pgYy5",
-            "username": USERNAME,
-            "password": PASSWORD,
+            "logintoken": "",
+            "username": "2007421030",
+            "password": "Y5hZ6sJ6",
             "rememberusername": "1",
         }
         headers = {
             "Host": "elearning.pnj.ac.id",
             "Origin": "http://elearning.pnj.ac.id",
             "Referer": "http://elearning.pnj.ac.id/login/index.php",
-            "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 RuxitSynthetic/1.0 v3747914906 t5083783441834076769 athfa3c3975 altpub cvcv=2 smf=0",
         }
         try:
             r = self.session.get(self.loginUrl, headers=headers, timeout=4)
