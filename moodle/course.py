@@ -9,7 +9,7 @@ class course(moodle):
     def get_course(self):
         payload = {"perpage": "50"}
         r = self.session.get(
-            f"https://elearning.pnj.ac.id/login/index.php?categoryid={SEMID}",
+            f"https://elearning.pnj.ac.id/course/index.php?categoryid={SEMID}",
             params=payload,
         )
         soup = BeautifulSoup(r.text, "html.parser")
